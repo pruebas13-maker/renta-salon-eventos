@@ -1,1 +1,62 @@
+Insert into Clientes (ID_Cliente, Nombres, Apellido_Paterno, Apellido_Materno, Telefono, Correo)
+Values
+(1, 'Raul', 'Castro', 'Reyes', '9624221111', 'Raul5@gmail.com'),
+(2, 'Karen', 'Leyva', 'Mendez', '9624221113', 'Karen2@gmail.com'),
+(3, 'Said', 'Perez', 'Rangel', '9624221113', 'Said21@gmail.com');
 
+Insert into Servicios (ID_Servicio, Nombre_Servicio, Precio_Unitario, Descripcion)
+Values
+(11, 'Comida','5000', 'Mole rojo con arroz para 50 personas'),
+(12, 'Musica', '3750','DJ por 3 horas musica a tu gusto'),
+(13, 'Sillas y mesas', '1000', 'Sillas y mesas para 50 personas'),
+(14, 'Renta de salon', '400', 'Renta de salon por hora');
+
+Insert into Empleados (ID_Empleado, Nombres, Apellido_Paterno, Apellido_Materno, Puesto, Telefono, Salario)
+Values
+(111, 'Juan', 'Lujano', 'Telles', 'Cocinero', '9624331111', '575'),
+(122, 'Maria', 'Perez', 'Cazeres', 'Cocinero', '9624331112', '575'),
+(133, 'Carlos', 'Ramirez', 'Catalan', 'DJ', '9624331113', '2500'),
+(144, 'Omar', 'Rojas', 'Mateos', 'Mesero', '9624331114', '450'),
+(155, 'Paola', 'Lopez', 'Telles', 'Fuente', '9624331115', '450'),
+(166, 'Ana', 'Ramirez', 'Catalan', 'Mesero', '9624331116', '450');
+
+Insert into Eventos (ID_Evento, ID_Cliente, Fecha_Evento, Hora_Evento, Hora_Fin, Tipo_Evento, Estado_Evento)
+Values
+(201, '1', '2026-09-26', '17:00', '23:00', 'Boda', 'Confirmado'),
+(202, '2', '2026-10-03', '16:00', '22:00', 'Cumpleaños', 'Pendiente'),
+(203, '3', '2026-10-04', '11:00', '16:00', 'Bautizo', 'Confirmado');
+
+Insert into Detalles_Evento (ID_detalles_Evento, ID_Evento, ID_Servicio, Cantidad, Subtotal)
+Values
+(140, '201', '11', '4', '20000'),
+(141, '201', '12', '2', '7500'),
+(142, '201', '13', '4', '4000'),
+(143, '201', '14', '6', '2400'),
+(144, '202', '12', '2', '7500'),
+(145, '202', '13', '1', '2000'),
+(146, '202', '14', '6', '2400'),
+(147, '203', '11', '2', '10000'),
+(148, '203', '13', '2', '2000'),
+(149, '203', '14', '5', '2000');
+
+Insert into asignacion_empleados (id_asignacion_empleado, id_empleado, id_evento)
+Values
+(301, '111', '201'),
+(302, '122', '201'),
+(303, '133', '201'),
+(304, '144', '201'),
+(305, '155', '201'),
+(306, '166', '201'),
+(307, '133', '202'),
+(308, '144', '202'),
+(309, '155', '202'),
+(3010, '111', '203'),
+(3011, '122', '203'),
+(3012, '155', '203'),
+(3013, '166', '203');
+
+Insert into Pagos (ID_Pago, ID_Evento, Fecha_Pago, Monto)
+Values
+(401, '201', '2026/09/21', '33900'),
+(402, '202', '2026/10/03', '1900'),
+(403, '203', '2026/10/20', '14000');
